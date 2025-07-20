@@ -1,0 +1,3 @@
+[pr_reviewer]
+extra_instructions="Focus on identifying Python-specific security vulnerabilities, such as insecure use of eval(), improper input validation, and outdated library usage."
+enable_review_labels_security=true
