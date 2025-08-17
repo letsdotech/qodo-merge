@@ -1,0 +1,20 @@
+[config]
+model = "gpt-4o"  # or another model like "anthropic/claude-3-opus-20240229"
+fallback_models = ["gpt-4o"]
+
+[pr_reviewer]
+extra_instructions = """
+Focus on Python-specific security vulnerabilities, such as:
+- Insecure use of eval() or exec()
+- Hardcoded secrets or credentials
+- Improper input validation
+- Unhandled exceptions
+- Use of deprecated or insecure libraries (e.g., pickle, older requests versions)
+- Ensure adherence to PEP 8 and type hints for better code safety.
+"""
+require_tests_review = false  # Disable if tests are not mandatory
+require_security_review = true  # Enable security-focused review
+
+[pr_code_suggestions]
+num_code_suggestions = 8
+suggestions_score_threshold = 7
