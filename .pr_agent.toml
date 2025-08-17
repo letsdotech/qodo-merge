@@ -18,3 +18,9 @@ require_security_review = true  # Enable security-focused review
 [pr_code_suggestions]
 num_code_suggestions = 8
 suggestions_score_threshold = 7
+
+[github_action_config]
+auto_review = "true"
+auto_describe = "true"
+auto_improve = "true"
+pr_actions = ["opened", "reopened", "ready_for_review", "review_requested"]
