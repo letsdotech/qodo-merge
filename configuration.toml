@@ -1,0 +1,11 @@
+[security]
+check_hardcoded_secrets = true
+flag_pickle_usage = true
+
+[rag]
+enabled = true
+language = "python"
+
+[labels]
+security_issue = "possible security issue"
+compliance = "ticket check"
