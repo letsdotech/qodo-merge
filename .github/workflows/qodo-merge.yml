@@ -1,0 +1,14 @@
+name: Qodo Merge
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  qodo-merge:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Qodo Merge Review
+        uses: qodo-ai/qodo-merge@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
