@@ -1,11 +1,6 @@
-[security]
-check_hardcoded_secrets = true
-flag_pickle_usage = true
-
 [rag]
 enabled = true
-language = "python"
+language = "go"
 
-[labels]
-security_issue = "possible security issue"
-compliance = "ticket check"
+[pr_reviewer]
+extra_instructions = "Focus on Go concurrency issues. Look for map writes without locks. Check goroutine leaks. Check deadlocks."
